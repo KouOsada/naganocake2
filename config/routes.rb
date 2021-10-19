@@ -1,5 +1,30 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    get 'orders/show'
+    get 'orders/update'
+  end
+  namespace :admin do
+    get 'order_items/update'
+  end
+  get 'order_items/update'
+  namespace :admin do
+    get 'items/new'
+    get 'items/create'
+    get 'items/index'
+    get 'items/show'
+    get 'items/edit'
+    get 'items/update'
+  end
+  namespace :admin do
+    get 'homes/top'
+  end
+  namespace :admin do
+    get 'customers/index'
+    get 'customers/show'
+    get 'customers/edit'
+    get 'customers/update'
+  end
   # public
   devise_for :public,skip: [:passwords,], controllers: {
     registrations: "public/registrations",
