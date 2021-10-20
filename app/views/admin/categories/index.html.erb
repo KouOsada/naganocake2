@@ -15,7 +15,7 @@
     <% @categories.each do |category| %>
       <tr>
         <td><%= category.name %></td>
-        <td></td>
+        <td><%= link_to '編集する', edit_admin_category_path(category.id) %></td>
       </tr>
     <% end %>
   </tbody>
